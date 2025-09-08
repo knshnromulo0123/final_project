@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - GEARUP ARENA</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>GEARUP ARENA</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="checkout-container">
+        <div class="checkout-progress">
+            <div class="progress-step completed">
+                <div class="step-number">1</div>
+                <div class="step-label">Cart</div>
+            </div>
+            <div class="progress-connector completed"></div>
+            <div class="progress-step active">
+                <div class="step-number">2</div>
+                <div class="step-label">Checkout</div>
+            </div>
+            <div class="progress-connector"></div>
+            <div class="progress-step">
+                <div class="step-number">3</div>
+                <div class="step-label">Confirmation</div>
+            </div>
+        </div>
+        
+        <div class="checkout-content">
+            <form id="checkout-form" class="checkout-form">
+                <section class="checkout-section">
+                    <h3>Contact Information</h3>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                </section>
+                
+                <section class="checkout-section">
+                    <h3>Shipping Address</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="province">Province</label>
+                            <input type="text" id="province" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="postal-code">Postal Code</label>
+                        <input type="text" id="postal-code" required>
+                    </div>
+                </section>
+                
+                <section class="checkout-section">
+                    <h3>Shipping Method</h3>
+                    <div class="shipping-options">
+                        <div class="shipping-option">
+                            <input type="radio" id="standard-shipping" name="shipping" value="standard" checked>
+                            <label for="standard-shipping">
+                                <div class="option-details">
+                                    <span class="option-name">Standard Shipping</span>
+                                    <span class="option-description">3-5 business days</span>
+                                </div>
+                                <span class="option-price">₱150.00</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="checkout-section">
+                    <h3>Payment Method</h3>
+                    <div class="payment-options">
+                        <div class="payment-option">
+                            <input type="radio" id="cash-on-delivery" name="payment" value="cash-on-delivery" checked>
+                            <label for="cash-on-delivery">
+                                <span class="option-name">Cash on Delivery</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                
+                <div class="form-group terms-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the terms and conditions</label>
+                </div>
+            </form>
+            
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-items">
+                    <!-- Cart items will be dynamically inserted here by JavaScript -->
+                </div>
+                
+                <div class="summary-totals">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">₱0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>VAT (12%)</span>
+                        <span id="vat">₱0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span id="shipping-cost">₱150.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="total-cost">₱0.00</span>
+                    </div>
+                </div>
+                
+                <button type="submit" form="checkout-form" class="btn btn-primary" id="place-order-btn">Place Order</button>
+                <button type="button" class="btn btn-outline" onclick="window.location.href='cart.html'">Return to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GEARUP ARENA</h3>
+                <p>Your one-stop shop for quality sports equipment.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                </ul>
+            </div>
+    
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GEARUP ARENA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/checkout.js"></script>
+</body>
+</html>

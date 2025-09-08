@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - GEARUP ARENA</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/order-confirmation.css">
+    <script src="js/order-confirmation.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>GEARUP ARENA</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="confirmation-container">
+        <div class="confirmation-content">
+            <div class="success-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" fill="#28a745"/>
+                    <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            
+            <h1>Order Confirmed!</h1>
+            <p class="confirmation-message">
+                Thank you for your purchase! Your order has been successfully placed and is ready to ship.
+            </p>
+            
+            <div class="order-details">
+                <h3>Order Summary</h3>
+                <div class="order-info">
+                    <div class="info-row">
+                        <span class="label">Order Number:</span>
+                        <span class="value" id="order-number">#ORD-2025-001</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Order Date:</span>
+                        <span class="value" id="order-date">January 14, 2025</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Estimated Delivery:</span>
+                        <span class="value" id="delivery-date">January 17-19, 2025</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Total Amount:</span>
+                        <span class="value total-amount" id="total-amount">₱5,858.64</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="next-steps">
+                <h3>What's Next?</h3>
+                <ul>
+                    <li>📧 You'll receive an email confirmation shortly</li>
+                    <li>📦 Your order will be processed within 24 hours</li>
+                    <li>🚚 You'll get tracking information once shipped</li>
+                    <li>📱 Check your order status in your profile</li>
+                </ul>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="window.location.href='index.html'">
+                    Continue Shopping
+                </button>
+                <button class="btn btn-outline" onclick="window.location.href='orders.html'">
+                    View Orders
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GEARUP ARENA</h3>
+                <p>Your one-stop shop for quality sports equipment.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GEARUP ARENA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/order-confirmation.js"></script>
+</body>
+</html>

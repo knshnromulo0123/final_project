@@ -1,0 +1,146 @@
+/* Registration Form Specific Styles */
+.auth-form-container {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#registerForm .form-group {
+    margin-bottom: 1.2rem;
+}
+
+#registerForm .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+#registerForm .form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#registerForm .form-group input:focus {
+    border-color: #e74c3c;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+#registerForm .form-group input:hover {
+    border-color: #bbb;
+}
+
+#registerForm button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+#registerForm button[type="submit"]:hover {
+    background: #c0392b;
+}
+
+#registerForm .form-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+#registerForm .form-footer p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+#registerForm .form-footer a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#registerForm .form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Validation Styles */
+#registerForm input:invalid {
+    border-color: #e74c3c;
+}
+
+#registerForm input:invalid:focus {
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+/* Error Message Styles */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    display: none;
+}
+
+input:invalid + .error-message {
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    #registerForm .form-group {
+        margin-bottom: 1rem;
+    }
+
+    #registerForm .form-group input {
+        padding: 0.7rem;
+    }
+
+    #registerForm button[type="submit"] {
+        padding: 0.8rem;
+    }
+}
+
+/* Loading State */
+#registerForm button[type="submit"].loading {
+    background: #ccc;
+    cursor: not-allowed;
+    position: relative;
+}
+
+#registerForm button[type="submit"].loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

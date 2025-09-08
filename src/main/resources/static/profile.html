@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - GEARUP ARENA</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>GEARUP ARENA</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html" class="btn" id="sign-out-btn">Sign Out</a>
+        </div>
+    </header>
+
+    <main class="profile-container">
+        <div class="profile-sidebar">
+            <div class="profile-image">
+                <img src="" alt="">
+            </div>
+            <h2 id="user-name">John Doe</h2>
+            <p id="user-email">john.doe@example.com</p>
+            <!-- Removed profile-menu with buttons -->
+        </div>
+        
+        <div class="profile-content">
+            <section id="personal-info" class="profile-section">
+                <h2>Personal Information</h2>
+                <div class="info-group">
+                    <label>Name:</label>
+                    <p id="display-name"></p>
+                </div>
+                <div class="info-group">
+                    <label>Email:</label>
+                    <p id="display-email"></p>
+                </div>
+                <div class="info-group">
+                    <label>Phone:</label>
+                    <p id="display-phone"></p>
+                </div>
+            </section>
+            <!-- Removed order history section -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GEARUP ARENA</h3>
+                <p>Your one-stop shop for quality sports equipment.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GEARUP ARENA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

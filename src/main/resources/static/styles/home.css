@@ -1,0 +1,105 @@
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Featured Products Section */
+.featured-products,
+.new-arrivals {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+}
+
+.featured-products h2,
+.new-arrivals h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-size: 2.5rem;
+}
+
+/* Brands Section */
+.brands {
+  background: white;
+  padding: 3rem 0;
+  margin: 4rem 0;
+}
+
+.brands h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-size: 2rem;
+}
+
+.brand-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.brand:hover {
+  opacity: 1;
+}
+
+.brand img {
+  height: 60px;
+  width: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.brand:hover img {
+  filter: grayscale(0%);
+}
+
+/* Responsive Design for Home */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .featured-products h2,
+  .new-arrivals h2 {
+    font-size: 2rem;
+  }
+
+  .brand-logos {
+    gap: 1.5rem;
+  }
+
+  .brand img {
+    height: 40px;
+  }
+}

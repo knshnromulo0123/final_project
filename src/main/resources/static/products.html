@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - GEARUP ARENA</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/products.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>GEARUP ARENA</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html" class="btn">Sign In</a>
+        </div>
+    </header>
+
+    <main class="products-container">
+        <aside class="filters">
+            <h3>Filter Products</h3>
+            <div class="filter-group">
+                <h4>Categories</h4>
+                <ul>
+                    <li><input type="checkbox" id="category-weights"> <label for="category-weights">Weights & Equipment</label></li>
+                    <li><input type="checkbox" id="category-apparel"> <label for="category-apparel">Apparel</label></li>
+                    <li><input type="checkbox" id="category-balls"> <label for="category-balls">Sports Balls</label></li>
+                    <li><input type="checkbox" id="category-accessories"> <label for="category-accessories">Accessories</label></li>
+                </ul>
+            </div>
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <div class="price-range">
+                    <input type="range" id="price-range" min="0" max="5000" step="100">
+                    <div class="price-inputs">
+                        <input type="number" id="min-price" placeholder="Min" min="0">
+                        <span>to</span>
+                        <input type="number" id="max-price" placeholder="Max" min="0">
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary">Apply Filters</button>
+        </aside>
+        
+        <section class="product-listing">
+            <div class="product-header">
+                <h2>All Products</h2>
+                <div class="sort-options">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by">
+                        <option value="popularity">Popularity</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Products will be rendered here by JS -->
+            </div>
+            <div class="pagination">
+                <!-- Pagination will be rendered here by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GEARUP ARENA</h3>
+                <p>Your one-stop shop for quality sports equipment.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GEARUP ARENA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    
+</body>
+</html>

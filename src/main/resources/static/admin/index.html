@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - GEARUP ARENA</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body class="admin-body">
+    <div class="admin-login-container">
+        <div class="admin-login-form">
+            <div class="admin-logo">
+                <h1>GEARUP ARENA</h1>
+                <p>Admin Portal</p>
+            </div>
+            
+            <form id="admin-login-form">
+                <div class="form-group">
+                    <label for="admin-username">Email</label>
+                    <input type="email" id="admin-username" required placeholder="admin@gearuparena.com">
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" required placeholder="Enter your password">
+                </div>
+                <div id="login-error" class="error-message" style="color: red; margin-bottom: 10px; display: none;"></div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            
+            <div class="admin-login-footer">
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/admin-login.js"></script>
+</body>
+</html>

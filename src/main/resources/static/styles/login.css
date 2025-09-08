@@ -1,0 +1,145 @@
+/* Authentication Container */
+.auth-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-form-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Form Tabs */
+.form-tabs {
+  display: flex;
+  background: #f8f9fa;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background: white;
+  color: #e74c3c;
+  border-bottom: 2px solid #e74c3c;
+}
+
+/* Auth Form */
+.auth-form {
+  padding: 2rem;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.forgot-password {
+  color: #e74c3c;
+  text-decoration: none;
+  font-size: 0.9rem;
+  float: right;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Error Message Styles */
+.error-message {
+    color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.1);
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Hidden class for form switching */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design for Login */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 1rem;
+  }
+
+  .auth-form {
+    padding: 1.5rem;
+  }
+}
+
+/* Admin Login Section */
+.admin-login-section {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid #eee;
+  background: #f8f9fa;
+}
+
+.admin-divider {
+  position: relative;
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.admin-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ddd;
+  z-index: 1;
+}
+
+.admin-divider span {
+  background: #f8f9fa;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.admin-login-btn {
+  width: 100%;
+  background: #2c3e50;
+  color: white;
+  border: 2px solid #2c3e50;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.admin-login-btn:hover {
+  background: #34495e;
+  border-color: #34495e;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design for Admin Section */
+@media (max-width: 480px) {
+  .admin-login-section {
+    padding: 1rem;
+  }
+}

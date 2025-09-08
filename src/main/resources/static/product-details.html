@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - GEARUP ARENA</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/product-details.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>GEARUP ARENA</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html" class="btn">Sign In</a>
+        </div>
+    </header>
+
+    <main class="product-details-container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt;
+            <a href="products.html">Products</a> &gt;
+            <span id="product-name">Product Name</span>
+        </div>
+        
+        <div class="product-details">
+            <div class="product-images">
+                <div class="main-image">
+                    <img id="main-product-image" src="/placeholders?height=400&width=400" alt="Product Image">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h2 id="product-title">Product Name</h2>
+                <div class="product-meta">
+                    <p class="product-id">Product ID: <span id="product-id">12345</span></p>
+                    <div class="product-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">(24 reviews)</span>
+                    </div>
+                </div>
+                <p class="product-price">₱<span id="product-price">0.00</span></p>
+                <div class="product-availability">
+                    <span class="in-stock">In Stock</span>
+                </div>
+                
+                <div class="product-description">
+                    <h3>Description</h3>
+                    <p id="product-description">Product description will be displayed here.</p>
+                </div>
+                
+                <div class="product-actions">
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="decrementQuantity()">-</button>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button class="quantity-btn" onclick="incrementQuantity()">+</button>
+                    </div>
+                    <button class="btn btn-primary" id="add-to-cart-btn">Add to Cart</button>
+                    <button class="btn btn-secondary" id="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="reviews">Reviews</button>
+                <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" id="reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="review-summary">
+                        <div class="average-rating">
+                            <span class="big-rating">4.5</span>
+                            <div class="stars">★★★★☆</div>
+                            <span class="total-reviews">Based on 24 reviews</span>
+                        </div>
+                        <div class="rating-breakdown">
+                            <div class="rating-bar">
+                                <span class="rating-label">5 ★</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 70%"></div>
+                                </div>
+                                <span class="rating-count">17</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="rating-label">4 ★</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 20%"></div>
+                                </div>
+                                <span class="rating-count">5</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="rating-label">3 ★</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 5%"></div>
+                                </div>
+                                <span class="rating-count">1</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="rating-label">2 ★</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 4%"></div>
+                                </div>
+                                <span class="rating-count">1</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="rating-label">1 ★</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 0%"></div>
+                                </div>
+                                <span class="rating-count">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-list">
+                        <div class="review-item">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Juan Dela Cruz</span>
+                                <span class="review-date">May 15, 2025</span>
+                            </div>
+                            <div class="review-rating">★★★★★</div>
+                            <h4 class="review-title">Great quality product!</h4>
+                            <p class="review-text">I'm very satisfied with this product. The quality is excellent and it's exactly as described.</p>
+                        </div>
+                        
+                        <div class="review-item">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Maria Santos</span>
+                                <span class="review-date">April 28, 2025</span>
+                            </div>
+                            <div class="review-rating">★★★★☆</div>
+                            <h4 class="review-title">Good value for money</h4>
+                            <p class="review-text">The product is good for its price. Shipping was fast and the packaging was secure.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="shipping">
+                    <h3>Shipping Information</h3>
+                    <p>We offer the following shipping options:</p>
+                    <ul>
+                        <li><strong>Standard Shipping:</strong> 3-5 business days (₱150)</li>
+                        <!-- <li><strong>Express Shipping:</strong> 1-2 business days (₱300)</li> -->
+                    </ul>
+                    
+                    <h3>Return Policy</h3>
+                    <p>You may return most new, unopened items within 30 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error.</p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GEARUP ARENA</h3>
+                <p>Your one-stop shop for quality sports equipment.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Sports Avenue, Manila, Philippines</p>
+                <p>Email: info@gearuparena.com</p>
+                <p>Phone: +63 2 1234 5678</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GEARUP ARENA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/product-details.js"></script>
+</body>
+</html>
